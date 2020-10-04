@@ -1,0 +1,89 @@
+/* لاختيار جميع العناصر في أتش تي أم أل  */
+* {
+  /* لتحديد عرض وطول العنصر ابتداءًا من حدود العنصر دون إضافة الهوامش الداخلية لأبعاد العنصر */
+  box-sizing: border-box;
+  /* لإزالة الهامش الافتراضي للعناصر */
+  margin: 0;
+}
+
+body {
+  /* هذه الخاصية ستورّث لجميع العناصر داخل هذا العنصر */
+  font-family: sans-serif;
+  width: 80%;
+  margin: auto;
+  margin-top: 100px;
+}
+
+.title {
+  margin-bottom: 16px;
+}
+
+.avatar {
+  /* لجعل زوايا الصورة مدوّرة  */
+  border-radius: 50%;
+  /* لإبعاد الصورة عن النص */
+  margin-right: 10px;
+}
+
+.button {
+  /* إضافة هوامش داخلية للزر */
+  padding: 10px;
+  /* لون الخط */
+  color: white;
+  border-radius: 25px;
+  text-align: center;
+  margin-bottom: 5px;
+  font-weight: bold;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.blue {
+  background-color: rgb(0, 189, 189);
+}
+
+.green {
+  background-color: rgb(0, 221, 166);
+}
+
+.black {
+  background-color: black;
+  /* لا نريد هامش في الأسفل لآخر زر */
+  /* يمكننا تعديل التنسيق وإلكتابة فوقه، حيث يقوم المتصفح بالأخذ بآخر تنسيق للعنصر */
+  margin-bottom: 0;
+}
+
+.row-container {
+  display: flex;
+}
+
+.column-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.flex-2 {
+  flex-grow: 2;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  border: solid 1px #dddddd;
+  border-radius: 25px;
+  margin-right: 10px;
+}
+
+.centered-vertically {
+  align-items: center;
+}
+
+.flex-wrap {
+  flex-wrap: wrap;
+}
+
+/* عند عرض شاشة  600بيكسيل أو أصغر */
+@media only screen and (max-width: 600px) {
+  .buttons-container {
+    margin-top: 20px;
+    width: 100%;
+  }
+}
